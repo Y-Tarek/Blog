@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  db:
+    container_name: blog_database
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+    environment:
+      POSTGRES_DB: blog
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  web:
+    container_name: blog_backend
+    build: .
+    volumes:
+      - .:/app
+      - media:/app/media
+    env_file:
+      - ./.env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
+  media:
+
