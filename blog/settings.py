@@ -40,7 +40,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 CORS_ORIGIN_ALLOW_ALL = True  
-CSRF_TRUSTED_ORIGINS = ["http://207.154.228.33","http://127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = ["http://207.154.228.33:8002","http://127.0.0.1"]
 
 # Application definition
 
