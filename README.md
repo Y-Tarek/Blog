@@ -7,6 +7,8 @@ https://documenter.getpostman.com/view/28439113/2sA3XTfL6S
      - Please Follow This API docs as it contains all endpoints attached with the payload.
      - Images are sent as Base64 in Request Body
          - https://easy64.org/convert-file-to-base64/  (This website convert images and files to base64)
+## Live APP URL
+http://207.154.228.33:8002/
 
 ## Prerequisite
 >python
@@ -25,7 +27,7 @@ https://documenter.getpostman.com/view/28439113/2sA3XTfL6S
               - SQL_USER=postgres (changeable)
               - SQL_PASSWORD=postgres (changeable)
              docker-compose up --build
-             Then go to (http://0.0.0.0:8000/admin) for admin dashboard and (http://0.0.0.0:8000/api) is the base URL.
+             Then go to (http://0.0.0.0:8001/admin) for admin dashboard and (http://0.0.0.0:8001/api) is the base URL.
              username and password for admin dashboard found in entrypoint.sh file.
              
   Or you can run it manually by:
