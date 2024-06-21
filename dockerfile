@@ -20,14 +20,6 @@ COPY . /app/
 COPY entrypoint.sh /app/
 RUN chmod +x /app/entrypoint.sh
 RUN mkdir /app/static
-RUN mkdir /app/media
 
 ENTRYPOINT ["sh", "/app/entrypoint.sh"]
 
-
-FROM nginx:1.19.5 AS web
-RUN mkdir -p /usr/share/nginx/blog
-COPY --from=app-build /app/dist/ /usr/share/nginx/blog
-
-RUN rm /etc/nginx/conf.d/default.conf
-COPY app.conf /etc/nginx/conf.d/default.conf

@@ -10,4 +10,4 @@ python manage.py collectstatic --noinput
 
 chmod +x /app/staticfiles
 
-gunicorn blog.wsgi -b 0.0.0.0 --disable-redirect-access-to-syslog
+gunicorn blog.wsgi -b 0.0.0.0:8001  --disable-redirect-access-to-syslog
