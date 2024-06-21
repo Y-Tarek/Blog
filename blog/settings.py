@@ -91,9 +91,9 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
        "ENGINE": config(
-            "SQL_ENGINE", default="django.db.backends.postgresql"
+            "SQL_ENGINE", default="django.db.backends.sqlite3"
         ),
-        "NAME": config("SQL_DATABASE", default="blog"),
+        "NAME": config("SQL_DATABASE", default=BASE_DIR / 'db.sqlite3'),
         "USER": config("SQL_USER", default="postgres"),
         "PASSWORD": config("SQL_PASSWORD", default="postgres"),
         "HOST": config("SQL_HOST", default="localhost"),
